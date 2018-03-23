@@ -1,0 +1,194 @@
+# Razzie Netzwerk 16.03.18
+
+library(igraph)
+# liest die Dateien direkt aus dem github-Verzeichnis ein
+el <- read.csv("Edgelist_Razzies.csv", header=T, as.is=T, sep = ",")
+nl <- read.csv("Nodelist_Razzies.csv", header=T, as.is=T, sep = ",")
+# prüft, ob alle Variablen eingelesen wurden
+head(el)
+head(nl)
+# wandelt die edgelist in eine Matrix um und baut das igraph-Objekt
+mel <- as.matrix(el)
+razzie <- graph_from_data_frame(d=mel, vertices=nl, directed=F)
+razzie
+
+# addiert edges auf, wenn sie auf der gleichen Beziehung sind
+razziebasic <- simplify(razzie, edge.attr.comb = list)
+# ruft das finale igraph-Objekt auf.
+razziebasic
+
+# einfache Visualisierung
+plot(razzie, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Netzwerk Razzie Schauspieler 2010-2018", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+plot(razziebasic,edge.arrow.size = 0.1, layout=layout_with_kk)
+
+# Netzwerkmaße
+# Komponenten des Netzwerks
+components(razzie)
+# Verbindungen der Komponenten
+is_connected(razzie)
+# Durchmesser des Netzwerkes (maximale Pfaddistanz)
+diameter(razzie)
+# Dichte des Netzwerks
+edge_density(razzie)
+# Durchschnittliche Pfaddistanz
+mean_distance(razzie)
+
+# Cluster - Teilnetzwerke mit kurzer Pfaddistanz
+razziecluster <- cluster_walktrap(razzie)
+#modularity(razziecluster)
+#membership(razziecluster)
+plot(razziecluster, razzie, vertex.label=NA, edge.arrow.size=.2)
+# Sandhus Vorschlag: plot(razzie, layout = layout_with_fr, edge.arrow.size=.1, vertex.label=NA, vertex.size=2)
+
+# Teilnetzwerke 
+# Teilnetzwerk 2009
+razzie2009 <- subgraph.edges(razzie, E(razzie)[time == "2009"])
+razzie2009
+
+# Visualisierung des Teilnetzwerks 2009
+vcol <- rep("grey70", vcount(razzie2009))
+vcol[V(razzie2009)$win9 == "1"] <- "violetred3"
+vcol[V(razzie2009)$nom9 == "1"] <- "pink2"
+plot(razzie2009, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2009", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2010
+razzie2010 <- subgraph.edges(razzie, E(razzie)[time == "2010"])
+razzie2010
+
+# Visualisierung des Teilnetzwerks 2010
+vcol <- rep("grey70", vcount(razzie2010))
+vcol[V(razzie2010)$win10 == "1"] <- "violetred3"
+vcol[V(razzie2010)$nom10 == "1"] <- "pink2"
+plot(razzie2010, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2010", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2011
+razzie2011 <- subgraph.edges(razzie, E(razzie)[time == "2011"])
+razzie2011
+
+# Visualisierung des Teilnetzwerks 2011
+vcol <- rep("grey70", vcount(razzie2011))
+vcol[V(razzie2011)$win11 == "1"] <- "violetred3"
+vcol[V(razzie2011)$nom11 == "1"] <- "pink2"
+plot(razzie2011, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2011", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2012
+razzie2012 <- subgraph.edges(razzie, E(razzie)[time == "2012"])
+razzie2012
+
+# Visualisierung des Teilnetzwerks 2012
+vcol <- rep("grey70", vcount(razzie2012))
+vcol[V(razzie2012)$win12 == "1"] <- "violetred3"
+vcol[V(razzie2012)$nom12 == "1"] <- "pink2"
+plot(razzie2012, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2012", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+
+# Teilnetzwerk 2013
+razzie2013 <- subgraph.edges(razzie, E(razzie)[time == "2013"])
+razzie2013
+
+# Visualisierung des Teilnetzwerks 2013
+vcol <- rep("grey70", vcount(razzie2013))
+vcol[V(razzie2013)$win13 == "1"] <- "violetred3"
+vcol[V(razzie2013)$nom13 == "1"] <- "pink2"
+plot(razzie2013, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2013", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+
+# Teilnetzwerk 2014
+razzie2014 <- subgraph.edges(razzie, E(razzie)[time == "2014"])
+razzie2014
+
+# Visualisierung des Teilnetzwerks 2014
+vcol <- rep("grey70", vcount(razzie2014))
+vcol[V(razzie2014)$win14 == "1"] <- "violetred3"
+vcol[V(razzie2014)$nom14 == "1"] <- "pink2"
+plot(razzie2014, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2014", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2015
+razzie2015 <- subgraph.edges(razzie, E(razzie)[time == "2015"])
+razzie2015
+
+# Visualisierung des Teilnetzwerks 2015
+vcol <- rep("grey70", vcount(razzie2015))
+vcol[V(razzie2015)$win15 == "1"] <- "violetred3"
+vcol[V(razzie2015)$nom15 == "1"] <- "pink2"
+plot(razzie2015, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2015", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2016
+razzie2016 <- subgraph.edges(razzie, E(razzie)[time == "2016"])
+razzie2016
+
+# Visualisierung des Teilnetzwerks 2016
+vcol <- rep("grey70", vcount(razzie2016))
+vcol[V(razzie2016)$win16 == "1"] <- "violetred3"
+vcol[V(razzie2016)$nom16 == "1"] <- "pink2"
+plot(razzie2016, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2016", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk 2017
+razzie2017 <- subgraph.edges(razzie, E(razzie)[time == "2017"])
+razzie2017
+
+# Visualisierung des Teilnetzwerks 2017
+vcol <- rep("grey70", vcount(razzie2017))
+vcol[V(razzie2017)$win17 == "1"] <- "violetred3"
+vcol[V(razzie2017)$nom17 == "1"] <- "pink2"
+plot(razzie2017, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk 2017", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Teilnetzwerk Frauen
+razziewomen <- delete.vertices(razzie, V(razzie)[sex == "2"])
+razziewomen
+plot(razziewomen, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk Frauen", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Netzwerkmaße des Teilnetzwerk Frauen
+components(razziewomen)
+is_connected(razziewomen)
+diameter(razziewomen)
+edge_density(razziewomen)
+mean_distance(razziewomen)
+
+# Teilnetzwerk Männer
+razziemen <- delete.vertices(razzie, V(razzie)[sex == "1"])
+razziemen
+plot(razziemen, vertex.color=vcol, edge.arrow.size=0.1, layout=layout_with_kk, main="Teilnetzwerk Männer", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Netzwerkmaße des Teilnetzwerk Männer
+components(razziemen)
+is_connected(razziemen)
+diameter(razziemen)
+edge_density(razziemen)
+mean_distance(razziemen)
+
+# Teilnetzwerk U30
+razzieu30 <- delete.vertices(razzie, V(razzie)[age >= "30"])
+razzieu30
+plot(razzieu30, edge.arrow.size=.1, layout = layout_with_kk, main = "Teilnetzwerk U30")
+
+# Netzwerkmaße des U30
+components(razzieu30)
+is_connected(razzieu30)
+diameter(razzieu30)
+edge_density(razzieu30)
+mean_distance(razzieu30)
+
+# Teilnetzwerk 30-50
+razzie30to50 <- delete.vertices(razzie, V(razzie)[age < "30", age > "50"])
+razzie30to50
+plot(razzie30to50, edge.arrow.size=.1, layout = layout_with_kk, main = "Teilnetzwerk 30-50")
+
+# Netzwerkmaße des 30-50
+components(razzie30to50)
+is_connected(razzie30to50)
+diameter(razzie30to50)
+edge_density(razzie30to50)
+mean_distance(razzie30to50)
+
+#Teilnetzwerk o50
+razzieo50 <- delete.vertices(razzie, V(razzie)[age <= "50"])
+razzieo50
+plot(razzieo50, edge.arrow.size=.1, layout = layout_with_kk, main = "Teilnetzwerk o50")
+
+#Netzwerkmaße des o50
+components(razzieo50)
+is_connected(razzieo50)
+diameter(razzieo50)
+edge_density(razzieo50)
+mean_distance(razzieo50)
