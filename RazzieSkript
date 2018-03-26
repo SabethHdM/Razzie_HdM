@@ -1,5 +1,5 @@
 # Razzie Netzwerk 16.03.18
-#Das ist ein Verusuch
+Das ist die erste Änderung.
 library(igraph)
 # liest die Dateien direkt aus dem github-Verzeichnis ein
 el <- read.csv("Edgelist_Razzies.csv", header=T, as.is=T, sep = ",")
