@@ -244,3 +244,28 @@ is_connected(razzieo50)
 diameter(razzieo50)
 edge_density(razzieo50)
 mean_distance(razzieo50)
+
+#EGONETZWERKE
+#Egonetzwerk Adam Sandler
+vSandler <- subgraph <- make_ego_graph (razzie, order=1, c("Adam Sandler"))
+plot(vSandler[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Sandler EGO-Netzwerk")
+
+#Egonetzwerk Ben Stiller
+vStiller <- subgraph <- make_ego_graph (razzie, order=1, c("Ben Stiller"))
+plot(vStiller[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Stiller EGO-Netzwerk")
+
+#Egonetzwerk Will Ferrell
+vFerrell <- subgraph <- make_ego_graph (razzie, order=1, c("Will Ferrell"))
+plot(vFerrell[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Ferrell EGO-Netzwerk")
+
+#Egonetzwerk Kevin James
+vJames <- subgraph <- make_ego_graph (razzie, order=1, c("Kevin James"))
+plot(vJames[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="James EGO-Netzwerk")
+
+#Egonetzwerk Kristen Stewart
+vStewart <- subgraph <- make_ego_graph (razzie, order=1, c("Kristen Stewart"))
+plot(vStewart[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Stewart EGO-Netzwerk")
+
+#Egonetzwerk Tyler Perry
+vPerry <- subgraph <- make_ego_graph (razzie, order=1, c("Tyler Perry"))
+plot(vPerry[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Perry EGO-Netzwerk")
