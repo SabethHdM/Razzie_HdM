@@ -269,3 +269,12 @@ plot(vStewart[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.co
 #Egonetzwerk Tyler Perry
 vPerry <- subgraph <- make_ego_graph (razzie, order=1, c("Tyler Perry"))
 plot(vPerry[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Perry EGO-Netzwerk")
+
+#Egonetzwerk Robert De Niro 
+vDeniro <- subgraph <- make_ego_graph (razzie, order=1, c("Robert De Niro"))
+plot(vDeniro[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Perry EGO-Netzwerk")
+
+#Egonetzwerk Sarah Jessica Parker
+vParker <- subgraph <- make_ego_graph (razzie, order=1, c("Sarah Jessica Parker"))
+plot(vParker[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Perry EGO-Netzwerk")
+
