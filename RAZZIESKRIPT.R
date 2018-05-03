@@ -27,30 +27,53 @@ razzie
 # Eine erste, einfache Visualisierung erfolgt.
 plot(razzie)
 
+# Wir erstellen nun eine simple Form des Netzwerks, das selbstreferentielle Beziehungen ignoriert.
+
+razziesimple <- simplify(razzie, remove.multiple = FALSE, remove.loops = TRUE)
+razziesimple
+
 ## Netzwerkmaße
 # Als nächstes berechnen wir ein paar basale Netzwerkmaßen.
 
 # Besteht das Netzwerk nur aus einer Komponente?
 is_connected(razzie)
 
-# Wie viele Komponenten gibt es und wie viele Knoten befinden sich in ihnen?
+# Wie viele Komponenten gibt es und welche Knoten befinden sich in ihnen?
 components(razzie)
 
-# Wie ist der Durchmesser des Netzwerkes (= maximale Pfaddistanz)?
-diameter(razzie)
+# Wie ist die Dichte des Netzwerks? Dafür nutzen wir razziesimple, da ein Netzwerk mit selbstreferentiellen Beziehungen Werte über 100 Prozent liefert und sie damit verfälscht.
+edge_density(razziesimple)
 
-# Wie ist die Dichte des Netzwerks?
-edge_density(razzie)
+## Akteursmaße
+# Wir berechnen ebenfalls die Degrees
 
-# Wie ist die durchschnittliche Pfaddistanz?
-mean_distance(razzie)
+degree(razzie)
+degree(razziesimple)
 
 ## Bessere Visualisierungen
 # Die Visualisierung des Gesamtnetzwerks wird optisch optimiert. Dabei werden die Knoten danach gefärbt, wie oft sie zwischen 2010 und 2018 nominiert worden sind.
-col=rev(heat.colors(5))
-V(razzie)$color <- col[V(razzie)$nomtot]
+vcolrazzie <- vcount(razzie)
+vcolrazzie[V(razzie)$nomtot == "1"] <- "grey90"
+vcolrazzie[V(razzie)$nomtot == "2"] <- "pink"
+vcolrazzie[V(razzie)$nomtot == "3"] <- "palevioletred"
+vcolrazzie[V(razzie)$nomtot == "4"] <- "deeppink"
+vcolrazzie[V(razzie)$nomtot == "5"] <- "deeppink4"
 coords <- layout_with_kk(razzie)*0.3
-plot(razzie, edge.arrow.size=0.1, layout = coords, rescale = FALSE, main="Netzwerk Razzie Schauspieler 2010-2018 nach Häufigkeit der Nominierung", vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+plot(razzie, edge.arrow.size=0.1, vertex.color=vcolrazzie, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+plot(razzie, vertex.size=10, edge.arrow.size=0.1, vertex.color=vcolrazzie, layout = coords, rescale = FALSE, ylim=c(-0.8,1.25),xlim=c(-1.05,1.4), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+# Wir visualisieren auch das simplerazzie Netzwerk auf diese Art und Weise
+vcolrazziesimple <- vcount(razziesimple)
+vcolrazziesimple[V(razziesimple)$nomtot == "1"] <- "grey" #eigtl grey90
+vcolrazziesimple[V(razziesimple)$nomtot == "2"] <- "pink"
+vcolrazziesimple[V(razziesimple)$nomtot == "3"] <- "palevioletred"
+vcolrazziesimple[V(razziesimple)$nomtot == "4"] <- "deeppink"
+vcolrazziesimple[V(razziesimple)$nomtot == "5"] <- "violet" #eigtl deeppink4
+coords <- layout_with_kk(razziesimple)*0.3
+plot(razziesimple, vertex.size=10, edge.arrow.size=0.1, vertex.color=vcolrazziesimple, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
+
+plot(razziesimple, vertex.size=10, edge.arrow.size=0.1, vertex.color=vcolrazziesimple, layout = coords, rescale = FALSE, ylim=c(-0.8,1.25),xlim=c(-1.05,1.4), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
 
 ##Cluster
 # Nun wird das Gesamtnetzwerk auf Cluster hin untersucht.
