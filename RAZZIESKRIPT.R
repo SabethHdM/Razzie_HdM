@@ -53,11 +53,11 @@ degree(razziesimple)
 ## Bessere Visualisierungen
 # Die Visualisierung des Gesamtnetzwerks wird optisch optimiert. Dabei werden die Knoten danach gefärbt, wie oft sie zwischen 2010 und 2018 nominiert worden sind.
 vcolrazzie <- vcount(razzie)
-vcolrazzie[V(razzie)$nomtot == "1"] <- "grey90"
-vcolrazzie[V(razzie)$nomtot == "2"] <- "pink"
-vcolrazzie[V(razzie)$nomtot == "3"] <- "palevioletred"
-vcolrazzie[V(razzie)$nomtot == "4"] <- "deeppink"
-vcolrazzie[V(razzie)$nomtot == "5"] <- "deeppink4"
+vcolrazzie[V(razzie)$nomtot == "1"] <- "pink"
+vcolrazzie[V(razzie)$nomtot == "2"] <- "violetred1"
+vcolrazzie[V(razzie)$nomtot == "3"] <- "violetred3"
+vcolrazzie[V(razzie)$nomtot == "4"] <- "violetred"
+vcolrazzie[V(razzie)$nomtot == "5"] <- "violetred4"
 coords <- layout_with_kk(razzie)*0.3
 plot(razzie, edge.arrow.size=0.1, vertex.color=vcolrazzie, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
 
@@ -269,14 +269,82 @@ edge_density(razzieo50)
 mean_distance(razzieo50)
 
 #EGONETZWERKE
+
+##########Höchster Degreewert
 #Egonetzwerk Adam Sandler
 vSandler <- subgraph <- make_ego_graph (razzie, order=1, c("Adam Sandler"))
-plot(vSandler[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Sandler EGO-Netzwerk")
+#Visualisierung Sandler
+vFarbverlauf <- vcount(vSandler)
+vFarbverlauf[V(vSandler[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vSandler[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vSandler[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vSandler[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vSandler[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vSandler[[1]])*0.3
+plot(vSandler[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Sandler EGO-Netzwerk")
+
+#Egonetzwerk Nick Swardson 
+vSwardson <- subgraph <- make_ego_graph (razzie, order=1, c("Nick Swardson"))
+#Visualisierung Swardson
+vFarbverlauf <- vcount(vSwardson)
+vFarbverlauf[V(vSwardson[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vSwardson[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vSwardson[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vSwardson[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vSwardson[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vSwardson[[1]])*0.3
+plot(vSwardson[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Swardson EGO-Netzwerk")
+
+#Egonetzwerk Tyler Perry
+vPerry <- subgraph <- make_ego_graph (razzie, order=1, c("Tyler Perry"))
+#Visualisierung Perry
+vFarbverlauf <- vcount(vPerry)
+vFarbverlauf[V(vPerry[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vPerry[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vPerry[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vPerry[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vPerry[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vPerry[[1]])*0.3
+plot(vPerry[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Perry EGO-Netzwerk")
+
+###########Top drei Broker
+#Egonetzwerk Robert De Niro 
+vDeniro <- subgraph <- make_ego_graph (razzie, order=1, c("Robert De Niro"))
+#Visualisierung Deniro
+vFarbverlauf <- vcount(vDeniro)
+vFarbverlauf[V(vDeniro[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vDeniro[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vDeniro[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vDeniro[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vDeniro[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vDeniro[[1]])*0.3
+plot(vDeniro[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Deniro EGO-Netzwerk")
 
 #Egonetzwerk Ben Stiller
 vStiller <- subgraph <- make_ego_graph (razzie, order=1, c("Ben Stiller"))
-plot(vStiller[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Stiller EGO-Netzwerk")
+#Visualisierung Stiller
+vFarbverlauf <- vcount(vStiller)
+vFarbverlauf[V(vStiller[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vStiller[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vStiller[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vStiller[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vStiller[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vStiller[[1]])*0.3
+plot(vStiller[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Stiller EGO-Netzwerk")
 
+#Egonetzwerk Sarah Jessica Parker
+vParker <- subgraph <- make_ego_graph (razzie, order=1, c("Sarah Jessica Parker"))
+#Visualisierung Parker
+vFarbverlauf <- vcount(vParker)
+vFarbverlauf[V(vParker[[1]])$nomtot == "1"] <- "pink"
+vFarbverlauf[V(vParker[[1]])$nomtot == "2"] <- "violetred1"
+vFarbverlauf[V(vParker[[1]])$nomtot == "3"] <- "violetred3"
+vFarbverlauf[V(vParker[[1]])$nomtot == "4"] <- "violetred"
+vFarbverlauf[V(vParker[[1]])$nomtot == "5"] <- "violetred4"
+coords <- layout_with_kk(vParker[[1]])*0.3
+plot(vParker[[1]], edge.arrow.size=0.1, vertex.color=vFarbverlauf, layout = coords, rescale = FALSE, ylim=c(-1.8,1.3),xlim=c(-1.8,1.5), asp = 0, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black", main="Parker EGO-Netzwerk")
+
+############# Weitere
 #Egonetzwerk Will Ferrell
 vFerrell <- subgraph <- make_ego_graph (razzie, order=1, c("Will Ferrell"))
 plot(vFerrell[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Ferrell EGO-Netzwerk")
@@ -288,17 +356,4 @@ plot(vJames[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.colo
 #Egonetzwerk Kristen Stewart
 vStewart <- subgraph <- make_ego_graph (razzie, order=1, c("Kristen Stewart"))
 plot(vStewart[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Stewart EGO-Netzwerk")
-
-#Egonetzwerk Tyler Perry
-vPerry <- subgraph <- make_ego_graph (razzie, order=1, c("Tyler Perry"))
-plot(vPerry[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Perry EGO-Netzwerk")
-
-#Egonetzwerk Robert De Niro 
-vDeniro <- subgraph <- make_ego_graph (razzie, order=1, c("Robert De Niro"))
-plot(vDeniro[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Deniro EGO-Netzwerk")
-
-#Egonetzwerk Sarah Jessica Parker
-vParker <- subgraph <- make_ego_graph (razzie, order=1, c("Sarah Jessica Parker"))
-plot(vParker[[1]], vertex.color="grey70", edge.color = "pink3", vertex.label.color="black", vertex.frame.color="transparent", edge.arrow.size=0.1, layout=layout_with_kk, main="Parker EGO-Netzwerk")
-
 
