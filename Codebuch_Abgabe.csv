@@ -1,0 +1,74 @@
+Codebuch „The Razzie Network“,Jennifer Kögel | Jana Stäbener | Celine Eckl | Jacqueline Fritsch | Cosima Stäbener
+,
+,
+Wert,Kommentar
+edgelist,
+from,Definiert den Sender in gerichteten Netzwerken. Entspricht „id“ in der Nodelist. Genaue Angabe siehe „id“ unter „nodelist“.
+to ,Definiert den Empfänger in ungerichteten Netzwerken. Entspricht ID in der Nodelist. Genaue Angabe siehe „id“ unter „nodelist“
+relation,"Definiert die Art der Beziehung bei multiplexen Netzwerken mit verschiedenen Beziehungsarten. Die Art der Beziehung kann folgende Ausprägung haben, die jeweils von den Rollen der Akteuren abhängig sind."
+relation = coacting,Schauspieler X hat mit Schauspieler Y zusammengespielt. Selbstbezug unmöglich.
+relation = directed,Regisseur X hat Schauspieler Y directed. Selbstbezug möglich.
+relation = actedindirect,Schauspieler X wurde von Regisseur Y directed. Selbstbezug möglich.
+relation = produced,Produzent X hat Schauspieler Y produziert. Selbstbezug möglich.
+relation = actedinprod,Schauspieler X wurde von Produzent Y produziert. Selbstbezug möglich.
+relation = written,"Drehbuchschreiber X hat das Drehbuch des Films geschrieben, in dem Schauspieler Y spielt. Selbstbezug möglich."
+relation = actedinwritten,"Schauspieler X spielt in Film, dessen Drehbuch Drehbuchschreiber Y geschrieben hat. Selbstbezug möglich."
+relation = coproduced,Produzent X und Y haben den Film produziert. Selbstbezug möglich.
+relation = codirected,Regisseur X und Y haben den Film directed. Selbstbezug möglich.
+relation = cowritten,Drehbuchschreiber X und Y waren am Drehbuch beteiligt. Selbstbezug möglich.
+relation = prodwritten,"X ist Produzent, Y ist Drehbuchschreiber. Selbstbezug möglich."
+relation = writtenprod,"X ist Drehbuchschreiber, Y ist Produzent. Selbstbezug möglich."
+relation = proddirected,"X ist Produzent, Y ist Regisseur. Selbstbezug möglich."
+relation = directedprod,"X ist Regisseur, Y ist Produzent. Selbstbezug möglich."
+relation = directedwritten,"X ist Regisseur, Y ist Drehbuchschreiber. Selbstbezug möglich."
+relation = writtendirected,"X ist Drehbuchschreiber, Y ist Regisseur. Selbstbezug möglich."
+film,"Name des Films, innerhalb dessen die Beziehung beobachtet werden konnte. Keine Sonderzeichen, alles klein."
+time,"Definiert den Zeitpunkt in Jahren, in dem der betroffene Film, in dem die Beziehung zwischen zwei Knoten stattgefunden hat, veröffentlicht wurde"
+,
+nodelist,
+id,"Eindeutige Identifikation jedes einzelnen Knotens (vertex), der erfasst wird. Keine Sonderzeichen, nur ein Wort (Nachname des Schauspielers). Erster Buchstabe groß. Wenn Nachname doppelt vorkommt, wird der erste Buchstabe des Vornamens als Kleinbuchstabe ohne Leerzeichen angehängt."
+name,Name oder Bezeichnung des Knotens. Name ist vollständig und in richtiger Schreibweise mit Sonderzeichen angegeben.
+label,"Kurzes Label für igraph-Visualisierungen. Besteht aus den Initialen in Großbuchstaben. Bei doppelter Belegung erhält ein Akteur einen zusätzlichen Buchstaben, der sich aus dem letzten Buchstaben des Nachnamens ergibt."
+sex,"Dichotomer Wert: „1“ ist female, „2“ male"
+year,Erfasst das geburtsjahr in YY ohne voranstehende „19“.
+age,Erfasst das Alter als Zahl.
+skin-colour,Definiert die Hautfarbe in Buchstaben ohne Sonderzeichen.
+place of birth,Definiert den Geburtsort und -staat ohne Sonderzeichen in einem Wort
+nomtot,Definiert die gesamte Anzahl der Nominierungen zwischen 2010 und 2018 als numerischen Wert.
+,"Die folgenden Spalten definieren, bei welcher Talentagentur die Person unter Vertrag steht. Diese sind wie folgt codiert:"
+WME,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+CAA,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+TheArtistsPartnership,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+APA,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+Troika,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+UTA,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+ICMPartners,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+TheGershAgency,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+MagnaTalentAgency,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+IndependentTalentGroup,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+HyperionTalentAgency,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+ChambersManagement,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+InternationalArtistsManagement,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+CurtisBrownGroup,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+LindaMcAlisterTalent,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+LinstenManagement,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+MarkhamFroggatandIrwin,"Wenn „1“ eingetragen ist, ist der Schauspieler bei der Agentur unter Vertrag, wenn „2“, dann nicht."
+nota,"Wenn „1“ eingetragen ist, ist der Schauspieler bei keiner Agentur unter Vertrag."
+nom9,"Wenn die Person 2010 nominiert wurde, wird in „nom9“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom10,"Wenn die Person 2011 nominiert wurde, wird in „nom10“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom11,"Wenn die Person 2012 nominiert wurde, wird in „nom11“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom12,"Wenn die Person 2013 nominiert wurde, wird in „nom12“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom13,"Wenn die Person 2014 nominiert wurde, wird in „nom13“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom14,"Wenn die Person 2015 nominiert wurde, wird in „nom14“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom15,"Wenn die Person 2016 nominiert wurde, wird in „nom15“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom16,"Wenn die Person 2017 nominiert wurde, wird in „nom16“ eine „1“ eingetragen. Wenn nicht, „2“."
+nom17,"Wenn die Person 2018 nominiert wurde, wird in „nom17“ eine „1“ eingetragen. Wenn nicht, „2“."
+win9,"Wenn die Person 2010 gewonnen hat, wird in „win9“ eine „1“ eingetragen. Wenn nicht, „2“."
+win10,"Wenn die Person 2011 gewonnen hat, wird in „win10“ eine „1“ eingetragen. Wenn nicht, „2“."
+win11,"Wenn die Person 2012 gewonnen hat, wird in „win11“ eine „1“ eingetragen. Wenn nicht, „2“."
+win12,"Wenn die Person 2013 gewonnen hat, wird in „win12“ eine „1“ eingetragen. Wenn nicht, „2“."
+win13,"Wenn die Person 2014 gewonnen hat, wird in „win13“ eine „1“ eingetragen. Wenn nicht, „2“."
+win14,"Wenn die Person 2015 gewonnen hat, wird in „win14“ eine „1“ eingetragen. Wenn nicht, „2“."
+win15,"Wenn die Person 2016 gewonnen hat, wird in „win15“ eine „1“ eingetragen. Wenn nicht, „2“."
+win16,"Wenn die Person 2017 gewonnen hat, wird in „win16“ eine „1“ eingetragen. Wenn nicht, „2“."
+win17,"Wenn die Person 2018 gewonnen hat, wird in „win17“ eine „1“ eingetragen. Wenn nicht, „2“."
