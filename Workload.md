@@ -11,6 +11,9 @@
 * Datenerhebung/Erstellen der Edgelist
 ## Cosima Staneker (33334)
 * Datenerhebung/Erstellen der Edgelist
-* Bereinigung der Edgelist
+* Bereinigung der Edge- und Nodelist
+* Vortrag des Projekts
+* Erstellen der Prüfungsvorleistung
 * Erstellen des Projektberichts
-* Allgemeine Konzipierung und Entwicklung des Codes mit Fokus auf Visualisierungen, Farben, Netzwerkmaße
+* Allgemeine Konzipierung und Entwicklung des Codes mit Fokus auf Visualisierungen, Farben, Netzwerkmaße, Teilnetzwerke
+* geschätzter Zeitaufwand: ~60 Stunden
