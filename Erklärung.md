@@ -1,3 +1,0 @@
-# Änderungen vornehmen
-Wenn ihr Änderungen vornehmen wollt, klickt auf Branch: master, gebt einen Titel ein, z.B. „Teilnetzwerk2018Hinzufügen“ und klickt create New Branch. Der neue Branch kopiert die Datei aus dem Master Branch. Nun könnt ihr alles in EUREM Branch ausprobieren. Am Ende macht ihr eine Pull Request zwischen dem Master und eurem Branch. Dann wird geschaut, welche Veränderungen man übernimmt und welche nicht.
-hallo ;D
