@@ -15,5 +15,6 @@
 * Vortrag des Projekts
 * Erstellen der Prüfungsvorleistung
 * Erstellen des Projektberichts
+* Erstellen und Verwalten des Repositorys
 * Allgemeine Konzipierung und Entwicklung des Codes mit Fokus auf Visualisierungen, Farben, Netzwerkmaße, Teilnetzwerke
 * geschätzter Zeitaufwand: ~60 Stunden
