@@ -13,6 +13,14 @@
 * Datenerhebung/Erstellen der Edgelist
 ## Jana Stäbener (33020)
 * Datenerhebung/Erstellen der Edgelist
+* Soziodemographische Merkmale und Agencies - erste Recherche
+* Erstellung der PP für PVL
+* Egonetzwerke
+* Interpretation der Teilnetzwerke
+* Erstellung von Interpretationstabellen und Infizierungslisten
+* Korrekturlesen 
+* Design/ Erstellung Plakat und PP für 16. Mai
+* geschätzter Zeitaufwand insgesamt: ~55 Stunden
 ## Cosima Staneker (33334)
 * Datenerhebung/Erstellen der Edgelist
 * Bereinigung der Edge- und Nodelist
