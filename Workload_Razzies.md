@@ -3,16 +3,18 @@
 ## Celine Eckl (33069)
 ### Allgemeine Aufgaben
 * Datenerhebung/Erstellen der Edgelist
+* geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jacqueline Fritsch (33082)
 * Datenerhebung/Erstellung der Nodelist
 * Untersuchung der Ego-Netzwerke
 * Untersuchung der Akteursmaße
 * Darstellung der Teilnetzwerke
 * Korrekturlesen
-* geschätzter Zeitaufwand insgesamt: ~35 Stunden
+* geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jennifer Kögel (33003)
 * Datenerhebung/Erstellen der Edgelist
 * Recherche der Theorien und Literatur
+* geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jana Stäbener (33020)
 * Datenerhebung/Erstellen der Edgelist
 * Soziodemographische Merkmale und Agencies - erste Recherche
@@ -22,7 +24,7 @@
 * Erstellung von Interpretationstabellen und Infizierungslisten
 * Korrekturlesen 
 * Design/ Erstellung Plakat und PP für 16. Mai
-* geschätzter Zeitaufwand insgesamt: ~55 Stunden
+* geschätzter Zeitaufwand insgesamt: ~80 Stunden
 ## Cosima Staneker (33334)
 * Datenerhebung/Erstellen der Edgelist
 * Bereinigung der Edge- und Nodelist
@@ -31,4 +33,4 @@
 * Erstellen des Projektberichts
 * Erstellen und Verwalten des Repositorys
 * Allgemeine Konzipierung und Entwicklung des Codes mit Fokus auf Visualisierungen, Farben, Netzwerkmaße, Teilnetzwerke
-* geschätzter Zeitaufwand insgesamt: ~70 Stunden
+* geschätzter Zeitaufwand insgesamt: ~95 Stunden
