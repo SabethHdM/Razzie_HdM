@@ -7,7 +7,7 @@
 # Zunächst müssen die Basis-Pakete installiert und geladen werden. Diese Schritte können bei Bedarf überprungen werden.
 install.packages("igraph")
 library(igraph)
-intall.packages("visNetwork")
+install.packages("visNetwork")
 library("visNetwork")
 
 # Die Edge- und Nodelist werden direkt aus dem GitHub Verzeichnis ausgelesen.
