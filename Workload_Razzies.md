@@ -12,6 +12,7 @@
 * geschätzter Zeitaufwand insgesamt: ~35 Stunden
 ## Jennifer Kögel (33003)
 * Datenerhebung/Erstellen der Edgelist
+* Recherche der Theorien und Literatur
 ## Jana Stäbener (33020)
 * Datenerhebung/Erstellen der Edgelist
 * Soziodemographische Merkmale und Agencies - erste Recherche
