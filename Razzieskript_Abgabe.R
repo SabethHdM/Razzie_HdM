@@ -2,6 +2,7 @@
 ### Gruppenmitglieder: Celine Eckl (cs039), Jacqueline Fritsch (jf079), Jennifer Kögel (jk180), Jana Stäbener (js324), Cosima Staneker (cs238)
 ### Im nachfolgenden Skript werden die einzelnen Arbeitsschritte durch Kommentare genau erklärt und definiert, damit sie nachvollzogen werden können.
 ### Je nach Belieben kann aber auch einfach durchge„run“t werden.
+### Ab und zu taucht der folgende Error auf: Error in seq_len(no) : „argument must be coercible to non-negative integer“. Dies ist kein Grund zur Besorgnis, wie diese Quelle zeigt: https://github.com/igraph/rigraph/issues/104
 
 ### Basics
 # Zunächst müssen die Basis-Pakete installiert und geladen werden. Diese Schritte können bei Bedarf überprungen werden.
