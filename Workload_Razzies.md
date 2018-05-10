@@ -8,6 +8,7 @@
 * Untersuchung der Ego-Netzwerke
 * Untersuchung der Akteursmaße
 * Darstellung der Teilnetzwerke
+* Korrekturlesen
 * geschätzter Zeitaufwand insgesamt: ~35 Stunden
 ## Jennifer Kögel (33003)
 * Datenerhebung/Erstellen der Edgelist
