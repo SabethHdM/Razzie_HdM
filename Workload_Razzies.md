@@ -33,4 +33,5 @@
 * Erstellen des Projektberichts
 * Erstellen und Verwalten des Repositorys
 * Allgemeine Konzipierung und Entwicklung des Codes mit Fokus auf Visualisierungen, Farben, Netzwerkmaße, Teilnetzwerke
+* Ansprechpartnerin für Fragen aller Art
 * geschätzter Zeitaufwand insgesamt: ~95 Stunden
