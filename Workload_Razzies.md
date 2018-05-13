@@ -1,7 +1,6 @@
 # Aufgeschlüsselter Workload nach Teammitglied
 
 ## Celine Eckl (33069)
-### Allgemeine Aufgaben
 * Datenerhebung/Erstellen der Edgelist
 * Visualisierung der Teilnetzwerke
 * Untersuchung des Gesamtnetzwerks
