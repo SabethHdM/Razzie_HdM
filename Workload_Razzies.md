@@ -3,6 +3,10 @@
 ## Celine Eckl (33069)
 ### Allgemeine Aufgaben
 * Datenerhebung/Erstellen der Edgelist
+* Visualisierung der Teilnetzwerke
+* Untersuchung des Gesamtnetzwerks
+* Untersuchung Netzwerkmechanismen
+* Korrekturlesen
 * geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jacqueline Fritsch (33082)
 * Datenerhebung/Erstellung der Nodelist
