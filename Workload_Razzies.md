@@ -17,6 +17,7 @@
 ## Jennifer Kögel (33003)
 * Datenerhebung/Erstellen der Edgelist
 * Recherche der Theorien und Literatur
+* Korrekturlesen
 * geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jana Stäbener (33020)
 * Datenerhebung/Erstellen der Edgelist
