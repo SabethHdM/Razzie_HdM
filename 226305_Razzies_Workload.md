@@ -16,8 +16,11 @@
 * geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jennifer Kögel (33003)
 * Datenerhebung/Erstellen der Edgelist
-* Recherche der Theorien und Literatur
+* Korrektur der Nodelist
+* Recherche der Theorien und Literatur 
 * Korrekturlesen
+* Erstellung der Liste der nominierten Filme
+* Vortrag des Projekts
 * geschätzter Zeitaufwand insgesamt: ~70 Stunden
 ## Jana Stäbener (33020)
 * Datenerhebung/Erstellen der Edgelist
